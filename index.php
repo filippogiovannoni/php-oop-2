@@ -40,7 +40,8 @@ require_once __DIR__ . '/database/db.php'
                                 <p><?= $product->description ?></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="badge bg-success"><?= $product->price . ' ' . '€' ?></span>
-                                    <h6 class="text-center"><?= $product->category ?></h6>
+                                    <span class="badge rounded-pill bg-info text-dark"><?= $product->category ?></span>
+                                    <span class="badge rounded-pill bg-warning text-dark"><?= $product::class ?></span>
                                 </div>
                             </div>
                         </div>
