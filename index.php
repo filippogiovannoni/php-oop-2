@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/database/db.php'
 
 ?>
 
@@ -27,6 +28,25 @@
     <main class="mt-3">
         <div class="container">
             <div class="row">
+                <?php foreach ($dbStore as $product) : ?>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="text-center"><?= $product->name ?></h3>
+                                <img width="100%" src="<?= $product->image ?>" alt="">
+                            </div>
+                            <div class="card-footer">
+                                <p><?= $product->description ?></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-success"><?= $product->price . ' ' . '€' ?></span>
+                                    <h6 class="text-center"><?= $product->category ?></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php endforeach; ?>
             </div>
         </div>
     </main>
