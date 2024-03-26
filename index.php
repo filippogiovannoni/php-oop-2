@@ -1,18 +1,5 @@
 <?php
 
-class Product
-{
-    public $name;
-    public $description;
-    public $price;
-    public $category;
-}
-
-class Category
-{
-    public $name;
-}
-
 ?>
 
 
